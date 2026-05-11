@@ -1,6 +1,23 @@
-# Claude Code Skills
+# Skills
 
-Custom skills for Claude Code.
+Custom skills for AI coding agents.
+
+## Quick Install
+
+```bash
+git clone git@github.com:doublepi123/skills.git
+cd skills
+
+# interactive mode
+./install.sh
+
+# or specify target directly
+./install.sh --target claude
+./install.sh --target codex --skill review-fix-loop
+./install.sh --target cursor --level user
+```
+
+Supports installing to: **Generic** (`.agents/skills/`), **Claude Code**, **OpenCode**, **Codex** (OpenAI), **Cursor**, **Traycer**, **Aider**, **Windsurf**, **Continue**, **Amp**.
 
 ## Skills
 
@@ -14,4 +31,4 @@ Supports reviewing:
 - Diff from master or any branch
 - Recent N commits
 
-Built-in cycle detection prevents A→B→A ping-pong changes. Produces a full review and fix report.
+Built-in cycle detection (SHA256 content hashing) prevents A→B→A ping-pong changes. Produces a full review and fix report.
